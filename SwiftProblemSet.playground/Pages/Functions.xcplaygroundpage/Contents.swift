@@ -26,11 +26,8 @@ emojiLove(stringParameterOne: "yin", stringParameterTwo: "yang")
 //: The function `median` should take three `Int` parameters and return the `Int` value in the middle.
 func median(num1: Int, num2: Int, num3: Int) -> Int {
     /* add function implementation here */
-    var medianArray = [num1, num2, num3]
-    medianArray.sort()
     
-    return medianArray[1]
-    
+    return [num1, num2, num3].sorted()[1]
 }
 
 /* Example Function Call
@@ -105,11 +102,13 @@ beginsWithVowel("") // false
  */
 func funWithWords(_ word: String) -> String {
     /* add function implementation here */
-    if beginsWithVowel(word) {
-        return word.uppercased()
-    } else {
-        return word.lowercased()
-    }
+//    if beginsWithVowel(word) {
+//        return word.uppercased()
+//    } else {
+//        return word.lowercased()
+//    }
+    //ternary
+    return beginsWithVowel(word) ? word.uppercased() : word.lowercased()
    
 }
 

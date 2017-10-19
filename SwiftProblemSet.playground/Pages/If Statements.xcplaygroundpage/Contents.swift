@@ -69,7 +69,7 @@ func release() {
 }
 
 func checkForRelease(bugs: Int, music: Bool, levels: Int) {
-    if bugs <= 9 && hasMusic == true && numberOfLevels == 7 {
+    if bugs <= 9 && hasMusic == true && numberOfLevels > 5 {
         release()
     } else {
         if bugs >= 10 {
